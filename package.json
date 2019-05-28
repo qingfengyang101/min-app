@@ -1,0 +1,32 @@
+{
+  "name": "min-app",
+  "version": "1.0.0",
+  "description": "this is use webpack 4.0 for project to use model",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode production",
+    "dev": "webpack-dev-server --open --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qingfengyang101/min-app.git"
+  },
+  "keywords": [
+    "webpack",
+    "model",
+    "ES6"
+  ],
+  "author": "XYH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qingfengyang101/min-app/issues"
+  },
+  "homepage": "https://github.com/qingfengyang101/min-app#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  }
+}
