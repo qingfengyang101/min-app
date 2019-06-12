@@ -74,7 +74,7 @@
             }
         }),
         new CleanWebpackPlugin({
-            path: pathConfigModel("/dist")
+            path: pathConfigModel("/dist/*.js")
         })
     ],
     devServer: {

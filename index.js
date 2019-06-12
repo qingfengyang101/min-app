@@ -1,4 +1,12 @@
-import './asset/style/index.scss'
-import  BaseModelClass from './plugin/Unit/CommonModelClass';
+import './asset/style/common.scss';
+import './asset/style/index.scss';
+import ProxyModel from  './plugin/ProxyModel/index';
 
-console.log(BaseModelClass);
+/**
+ *  init commonProxy instance to proxy model
+ * @type {ProxyModel}
+ * @return null
+ */
+const commonProxy = new ProxyModel();
+commonProxy.getAxios().getHttp(commonProxy.getUrl().headerUrlApi, (data) => {
+});
