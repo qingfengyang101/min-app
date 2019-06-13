@@ -7,10 +7,27 @@
  **/
 import URL from "../../API/Url";
 import axiosHttpModel from "../../API";
+import CODE_SERVER from "../../API/Code";
 
  class BaseModelClass {
      constructor (data) {
         this.data = data;
+     }
+
+     changeDOMNode (templateStr) {
+        let warp = document.createElement('div');
+        warp.innerHTML = templateStr;
+        return warp.childNodes;
+     }
+
+     appendTemplate (dom) {
+         if (dom && typeof dom === 'object') {
+             Array.from(dom).map ( (v, k) => {
+                 document.getElementById('app').appendChild(v);
+             });
+         }
+
+         return null;
      }
 
      getUrl () {
@@ -21,7 +38,9 @@ import axiosHttpModel from "../../API";
         return axiosHttpModel;
      }
 
-
+     getServerCode () {
+         return CODE_SERVER;
+     }
 }
 
 export default BaseModelClass;

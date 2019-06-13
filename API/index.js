@@ -6,16 +6,16 @@
  **/
 import qs from 'qs';
 import axios from 'axios';
+import CODE_SERVER from "./Code";
 
 // 添加请求登录之前的拦截 request 请求
 axios.interceptors.request.use( (config) => {
     if (config.method === "post") {
         // 利用qs库来进行转化为url参数
-        config.data = qs.stringify(config.data)
+        config.data = qs.stringify(config.data);
     }
     return config;
 }, (error) => {
-    console.log(error);
     return Promise.reject(error)
 });
 
@@ -35,7 +35,7 @@ axios.interceptors.response.use( (response) => {
  const axiosHttpModel = {
      getHttp: (url, callback) => {
          return axios.get(url).then( ( data ) => {
-             if (parseInt( data.status) === 200) {
+             if (parseInt( data.status ) === CODE_SERVER.SUCCESS_CODE) {
                   if ( callback && typeof callback === 'function' ) {
                       callback(data);
                   }
@@ -44,7 +44,7 @@ axios.interceptors.response.use( (response) => {
      },
     postHttp: (url, param, callback) => {
          return axios.post(url, param).then( ( data ) => {
-             if (data && parseInt(data.status) === 200) {
+             if (data && parseInt(data.status) === CODE_SERVER.SUCCESS_CODE) {
                  if (callback && typeof callback === 'function') {
                      callback(data);
                  }

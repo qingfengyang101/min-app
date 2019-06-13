@@ -20,9 +20,5 @@ class ProxyModel extends BaseModelClass{
     }
 
 }
-
-
-
-
 export  default ProxyModel;
 
