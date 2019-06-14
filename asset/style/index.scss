@@ -1,12 +1,15 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "common.scss";
 
 #app {
   margin: 0 auto;
-  width: 300px;
-  height: 400px;
+  max-width: 1200px;
+
+   .hua-wei-header ul {
+      list-style: none;
+      padding: 0 20px;
+      @include commonTemplate(flex, 100%, 28px, $color-fff, $common-font-size, $color-282828);
+      justify-items: center;
+  }
+
 }
+

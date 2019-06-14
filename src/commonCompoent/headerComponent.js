@@ -12,14 +12,14 @@ import ProxyModel from "../../plugin/ProxyModel";
  * @return null
  */
 function headerComponent (dataTemplate) {
-    let str =
-            `<header>
+    let template =
+            `<header class="hua-wei-header">
                 <ul>
                     ${dataTemplate}
                 </ul>
             </header>`;
 
-    return str;
+    return template;
 };
 
 let headerStr = '';
@@ -29,7 +29,7 @@ function getHeaderData () {
     return new Promise( (resolve => {
         commonProxy.getAxios().getHttp(commonProxy.getUrl().headerUrlApi, (data) => {
             data.data.data.map( ( v, k) => {
-                headerStr += `<li> ${ v.dataText }</li>`
+                headerStr += `<li class="${ v.id }"> ${ v.dataText }</li>`
             });
             resolve( headerComponent(headerStr) );
         });
