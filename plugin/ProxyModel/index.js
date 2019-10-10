@@ -26,5 +26,12 @@ class ProxyModel extends BaseModelClass{
     }
 
 }
-export  default ProxyModel;
+
+// init common proxy instantiation template for other component
+
+const commonProxyModel = (function () {
+    return new ProxyModel();
+})();
+
+export default commonProxyModel;
 

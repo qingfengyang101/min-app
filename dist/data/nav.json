@@ -1,9 +1,48 @@
 {
     "code": 200,
     "status": "OK",
+    "imgLogin": {        
+        "id": "loginImg",
+        "decribe":"this is a img for login",
+        "url": "/img/logo_new.png"
+    },
+    "carShop": {
+        "carShopIcon": "",
+        "carShopText": "购物车"
+    },
     "data": [
         {
-            "decribe":"login"
+            "decribe": "search",
+            "hotTextGather": [
+                {
+                    "id": "1",
+                    "hostText": "小米"
+                },
+                {
+                    "id": "2",
+                    "hostText": "农夫山泉"
+                },
+                {
+                    "id": "3",
+                    "hostText": "欧莱雅"
+                },
+                {
+                    "id": "4",
+                    "hostText": "食用油"
+                },
+                {
+                    "id": "5",
+                    "hostText": "橄榄油"
+                },
+                {
+                    "id": "6",
+                    "hostText": "儿童牙膏"
+                },
+                {
+                    "id": "7",
+                    "hostText": "维达抽纸"
+                }
+            ]
         }
     ]
 }

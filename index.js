@@ -1,8 +1,13 @@
 import './asset/style/index.scss';
+import  commonProxyModel from './plugin/ProxyModel/index';
 import headerComponent from "./src/commonCompoent/headerComponent";
-import ProxyModel from "./plugin/ProxyModel";
+import navComponent from "./src/navTemplate";
 
-const ProxyModelCommon = new ProxyModel();
+
 headerComponent().then( (data) => {
-    ProxyModelCommon.appendTemplate(ProxyModelCommon.changeDOMNode(data));
+    commonProxyModel.appendTemplate(commonProxyModel.changeDOMNode(data));
 } );
+
+navComponent().then( (data) => {
+    commonProxyModel.appendTemplate(commonProxyModel.changeDOMNode(data));
+})

@@ -4,7 +4,7 @@
  * date: 2019/6/10 9:48
  * @type {{}}
  */
-import ProxyModel from "../../plugin/ProxyModel";
+import commonProxyModel  from "../../plugin/ProxyModel";
 
 /**
  *  init commonProxy instance to proxy model
@@ -23,11 +23,10 @@ function headerComponent (dataTemplate) {
 };
 
 let headerStr = '';
-const commonProxy = new ProxyModel();
 
 function getHeaderData () {
     return new Promise( (resolve => {
-        commonProxy.getAxios().getHttp(commonProxy.getUrl().headerUrlApi, (data) => {
+        commonProxyModel.getAxios().getHttp(commonProxyModel.getUrl().headerUrlApi, (data) => {
             data.data.data.map( ( v, k) => {
                 if (v.iphoneUrl) {
                     headerStr += `<li class="${ v.id }"> <span><img class="nav-header-iphone" src="${ v.iphoneUrl }"> ${ v.dataText } <img src="${ v.iconUrl}"></span></li>`
