@@ -1,0 +1,52 @@
+{
+    "status": "OK",
+    "code": 200,
+    "data": [
+        {
+            "id": "greet",
+            "dataText": "Hi, 请",
+            "iconUrl": ""
+        },
+        {
+            "id": "login",
+            "dataText": "登录 / ",
+            "iconUrl":""
+        },
+        {
+            "id": "register",
+            "dataText": "注册",
+            "iconUrl": ""
+        },
+        {
+            "id": "my",
+            "dataText": "关于我们",
+            "iconUrl": ""
+        },
+        {
+            "id": "website_navigation",
+            "iphoneUrl": "/img/indexhead_iphone.png",
+            "dataText": "网站导航",
+            "iconUrl": "/img/indexhead_sprite_icon.png"
+        },
+        {
+            "id": "client_serve",
+            "dataText": "客户服务",
+            "iconUrl": "/img/indexhead_sprite_icon.png"
+        },
+        {
+            "id": "header_shop",
+            "dataText": "掌上1号店",
+            "iconUrl": "/img/indexhead_sprite_icon.png"
+        },
+        {
+            "id": "favorite",
+            "dataText": "收藏夹",
+            "iconUrl": "/img/indexhead_sprite_icon.png"
+        },
+        {
+            "id": "member",
+            "dataText": "我的1号店",
+            "iconUrl": "/img/indexhead_sprite_icon.png"
+        }
+    ]
+}

@@ -1,14 +1,37 @@
 @import "common.scss";
 
 #app {
-  margin: 0 auto;
-  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  
+  .hua-wei-header ul{
+    list-style: none;
+    padding: 0 85px;
+    @include commonTemplate(block, 100%, 28px,$color-a38c94, $common-font-size, $color-f9f9f9);
+    text-align: center;
+    line-height: 28px;
 
-   .hua-wei-header ul {
-      list-style: none;
-      padding: 0 20px;
-      @include commonTemplate(flex, 100%, 28px, $color-fff, $common-font-size, $color-282828);
-      justify-items: center;
+    .greet, .login, .register {
+      float: left ;
+    }
+
+    .nav-header-iphone {
+      padding-right: 9px;
+    }
+
+    .member, .favorite, .header_shop, .client_serve, .website_navigation, .my {
+      float: right;
+
+      span {
+        display: inline-block;
+        padding-right: 21px;
+        padding-left: 21px;
+        height: 12px;
+        text-align: center;
+        line-height: 12px;
+        border-right: 1px solid #cccccc;
+      }
+    }
   }
 
 }

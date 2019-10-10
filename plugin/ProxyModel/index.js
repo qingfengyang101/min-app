@@ -19,6 +19,12 @@ class ProxyModel extends BaseModelClass{
         super(subject);
     }
 
+    getCommonTemplate (template, data) {
+        if (!template || !data) {
+            return null;
+        }
+    }
+
 }
 export  default ProxyModel;
 

@@ -15,6 +15,7 @@ import CODE_SERVER from "../../API/Code";
      }
 
      changeDOMNode (templateStr) {
+        if (!templateStr) return null; 
         let warp = document.createElement('div');
         warp.innerHTML = templateStr;
         return warp.childNodes;

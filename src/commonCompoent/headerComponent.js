@@ -29,7 +29,12 @@ function getHeaderData () {
     return new Promise( (resolve => {
         commonProxy.getAxios().getHttp(commonProxy.getUrl().headerUrlApi, (data) => {
             data.data.data.map( ( v, k) => {
-                headerStr += `<li class="${ v.id }"> ${ v.dataText }</li>`
+                if (v.iphoneUrl) {
+                    headerStr += `<li class="${ v.id }"> <span><img class="nav-header-iphone" src="${ v.iphoneUrl }"> ${ v.dataText } <img src="${ v.iconUrl}"></span></li>`
+                } else {
+                    headerStr += `<li class="${ v.id }"> <span>${ v.dataText } <img src="${ v.iconUrl}"></span></li>`
+                }
+                
             });
             resolve( headerComponent(headerStr) );
         });

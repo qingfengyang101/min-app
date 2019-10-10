@@ -73,9 +73,6 @@
                 minifyJS: true
             }
         }),
-        // new CleanWebpackPlugin({
-        //     path: pathConfigModel("/dist/*.js")
-        // })
     ],
     devServer: {
         contentBase: pathConfigModel("/dist"),
