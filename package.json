@@ -25,7 +25,7 @@
   "homepage": "https://github.com/qingfengyang101/min-app#readme",
   "devDependencies": {
     "autoprefixer": "^9.5.1",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
